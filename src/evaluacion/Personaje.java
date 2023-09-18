@@ -9,15 +9,19 @@ public class Personaje {
 	private int puntosVida, puntosConseguidos; // entero entre 0 y 100
 	private int numeroElementos;
 	private String[] mochila = new String[10];
+	private int puntosFuerza;
 
-	public Personaje(String nombre, int puntosVida, int puntosConseguidos, String[] mochila, int numeroElementos) {
+	public Personaje(String nombre, int puntosVida, int puntosConseguidos, int numeroElementos, String[] mochila,
+			int puntosFuerza) {
 		super();
 		this.nombre = nombre;
 		this.puntosVida = puntosVida;
 		this.puntosConseguidos = puntosConseguidos;
-		this.mochila = mochila;
 		this.numeroElementos = numeroElementos;
+		this.mochila = mochila;
+		this.puntosFuerza = puntosFuerza;
 	}
+
 
 	public Personaje(String nombre) {
 
@@ -60,6 +64,15 @@ public class Personaje {
 	public int getNumeroElementos() {
 		return numeroElementos;
 	}
+	
+	public int getPuntosFuerza() {
+		return puntosFuerza;
+	}
+
+	public void setPuntosFuerza(int puntosFuerza) {
+		this.puntosFuerza = puntosFuerza;
+	}
+
 
 	@Override
 	public int hashCode() {
@@ -125,5 +138,7 @@ public class Personaje {
 		}
 		return puntosVida;
 	}
+	
+	
 
 }
